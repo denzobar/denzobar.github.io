@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Image Generator</title>
+
+    <style>
+      body {
+        background-color: #eee;
+      }
+
+      #image-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      #image {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image-container">
+      <img id="image" />
+    </div>
+    <script>
+      // Create array of image URLs
+      const imageURLs = [
+        "https://кассис-стоматология.рф/800/600/https/pbs.twimg.com/media/EEhpLMcXkAcrr9n.jpg",
+        "https://vsegda-pomnim.com/uploads/posts/2022-03/1647611573_1-vsegda-pomnim-com-p-karibskoe-more-foto-1.jpg",
+        "https://kartinkin.net/pics/uploads/posts/2022-07/1658525648_54-kartinkin-net-p-ostrova-karibskogo-morya-priroda-krasivo-f-66.jpg",
+        "https://w7.pngwing.com/pngs/93/332/png-transparent-person-trapped-in-cell-illustration-prison-crime-iconfinder-icon-jail-miscellaneous-text-logo.png",
+        // etc.
+      ];
+
+      // Select random image URL
+      const randomIndex = Math.floor(Math.random() * imageURLs.length);
+      const randomImageURL = imageURLs[randomIndex];
+
+      // Set image URL to image element
+      const imageElement = document.getElementById("image");
+      imageElement.src = randomImageURL;
+    </script>
+  </body>
+</html>
